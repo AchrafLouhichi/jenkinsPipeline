@@ -1,4 +1,3 @@
-Save it, commit and push.
 node {
     // Clean workspace before doing anything
     deleteDir()
