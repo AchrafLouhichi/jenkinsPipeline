@@ -29,7 +29,7 @@ try {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-    sh "${tool 'Maven 3.x'}/bin/mvn ${args}"
+    sh "C:/apache-maven-3.5.2/bin/mvn ${args}"
 }
 
 def runTests(duration) {
@@ -40,9 +40,9 @@ def runTests(duration) {
 
 def deploy(id) {
     unstash 'war'
-    sh "cp x.war /tmp/${id}.war"
+    sh "cp x.war C:/${id}.war"
 }
 
 def undeploy(id) {
-    sh "rm /tmp/${id}.war"
+    sh "rm C:/${id}.war"
 }
